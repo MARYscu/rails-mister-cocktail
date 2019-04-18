@@ -1,0 +1,7 @@
+<h1>Add a new dose</h1>
+
+<%= simple_form_for @dose do |f| %>
+  <%= f.input :cocktail_id %>
+  <%= f.input :name %>
+  <%= f.button :submit %>
+<% end %>
