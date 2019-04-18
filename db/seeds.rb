@@ -8,16 +8,21 @@
 require "open-uri"
 require "json"
 
+Ingredient.destroy_all
+Cocktail.destroy_all
+
 file = open('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list').read
 data_hash = JSON.parse(file)
 read = data_hash["drinks"]
 cocktails_ingredients = []
 read.each do |i|
   # i.new(name: ingredient["strIngredient1"])
-   cocktails_ingredients.push(i["strIngredient1"])
+  cocktails_ingredients.push(i["strIngredient1"])
    Ingredient.create!(name: i["strIngredient1"])
 end
 
-
-
-
+Cocktail.create!(name: 'Irish Coffee')
+Cocktail.create!(name: 'Boulevardier')
+Cocktail.create!(name: 'Negroni')
+Cocktail.create!(name: 'whiskey Sour')
+Cocktail.create!(name: 'Manhattan')
