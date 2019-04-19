@@ -5,6 +5,7 @@ class CocktailsController < ApplicationController
   end
 
   def show
+    @choose_dose = [1,2,3,4,5,6,7]
     @cocktail = Cocktail.find(params[:id])
   end
 
@@ -19,6 +20,14 @@ class CocktailsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def create_ingredient
+    c = Cocktail.find(params[:cocktail_id])
+    dose = dose.new(description: params[:description])
+    dose.cocktail = c
+  dose.ingredient = Ingredient.where(name: params[:ingredient])
+    ingredient.save!
   end
   private
   def cocktail_params
