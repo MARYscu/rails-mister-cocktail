@@ -19,8 +19,8 @@ console.log('Hello World from Webpacker')
 import 'bootstrap';
 // alert("hey there");
 
-if($('.cocktail-show').length > 0){
-	// ....
-	import { add } from '../component/addingredient.js';
-	add();
-}
+// if($('.cocktail-show').length > 0){
+// 	// ....
+// 	import { add } from '../component/addingredient.js';
+// 	add();
+// }
