@@ -5,7 +5,7 @@ class CocktailsController < ApplicationController
   end
 
   def show
-    @choose_dose = [1,2,3,4,5,6,7]
+    
     @cocktail = Cocktail.find(params[:id])
   end
 

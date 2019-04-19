@@ -1,14 +1,8 @@
 <ul>
   <% @cocktails.each do |cocktail| %>
-    <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-    <p>
-    	pp
-    </p>
-    <% cocktail.ingredients.each do |ingredient| %>
-    <p>00</p>
-    <li><%= ingredient.name %>OOO</li>
-    <% end %>
-  <% end %>
+    <li><%= link_to cocktail.name, cocktail_path(cocktail) %>
+    </li>
+   <% end %>
 </ul>
 
 <%= link_to "Add a new cocktail", new_cocktail_path %>
